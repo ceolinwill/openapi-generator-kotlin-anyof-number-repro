@@ -1,6 +1,6 @@
 # Kotlin client: a string-or-number `anyOf`/`oneOf` doesn't compile with kotlinx.serialization
 
-Reported in https://github.com/OpenAPITools/openapi-generator/issues/25452.
+Reported in https://github.com/OpenAPITools/openapi-generator/issues/25587 (a follow-up to https://github.com/OpenAPITools/openapi-generator/issues/25452).
 
 With the `kotlin` generator, `serializationLibrary=kotlinx_serialization` and `generateOneOfAnyOfWrappers=true`, a union with a number branch generates a wrapper whose `serialize()` doesn't compile. [#25472](https://github.com/OpenAPITools/openapi-generator/pull/25472) fixed an unformatted `type: number` (`BigDecimal`), but not the same union with `number` mapped to `kotlin.Double` or `integer` mapped to `kotlin.Long` (`--type-mappings=integer=kotlin.Long,number=kotlin.Double`).
 
