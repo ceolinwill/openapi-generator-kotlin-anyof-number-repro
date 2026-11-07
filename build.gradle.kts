@@ -30,7 +30,7 @@ sourceSets.main {
 }
 
 dependencies {
-    generator("org.openapitools:openapi-generator-cli:7.27.0-20261030.091743-151")
+    generator("org.openapitools:openapi-generator-cli:7.27.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.12.0")
     implementation("com.squareup.retrofit2:retrofit:3.0.0")
     implementation("com.squareup.retrofit2:converter-kotlinx-serialization:3.0.0")

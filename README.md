@@ -6,7 +6,7 @@ With the `kotlin` generator, `serializationLibrary=kotlinx_serialization` and `g
 
 ## Reproduction
 
-Requires JDK 17 or newer. The spec is [`openapi.yaml`](openapi.yaml): an `anyOf` and a `oneOf` of `string` and `number`, and the same two of `string` and `integer`. The build runs the `7.27.0-20261030.091743-151` CLI snapshot (published after #25472 merged; SHA256 `aa5f6609f715edff1a8701ff8ad1eb608fb6eed9973efe339e3b15fb7659591d`) with those type mappings, then compiles the client.
+Requires JDK 17 or newer. The spec is [`openapi.yaml`](openapi.yaml): an `anyOf` and a `oneOf` of `string` and `number`, and the same two of `string` and `integer`. The build runs the `7.27.0` CLI from Maven Central (released with #25472; SHA256 `db9c4b738727698748746144394cb7ee96512fe50166555baaeeca9311ee1dba`) with those type mappings, then compiles the client.
 
 ```sh
 ./gradlew compileKotlin
@@ -47,6 +47,6 @@ Writing every numeric primitive branch as `jsonEncoder.encodeJsonElement(JsonPri
 
 ## Environment
 
-- OpenAPI Generator `7.27.0-20261030.091743-151` (snapshot CLI, run from Gradle)
+- OpenAPI Generator `7.27.0` (CLI, run from Gradle)
 - Kotlin 2.4.21, kotlinx.serialization 1.12.0, Gradle 9.8.2, JDK 25
 - macOS 27
